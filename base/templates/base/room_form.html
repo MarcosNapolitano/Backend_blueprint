@@ -1,0 +1,21 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+
+
+<div>
+
+    <form method="POST" action="">
+
+        {% csrf_token %} <!--es para evitar ataques maliciosos-->
+        {{form.as_p}}<!--le agrega un tag p a cada parte-->
+        <input type="submit" value="Submit" />
+
+    </form>
+
+
+</div>
+
+{% endblock %}
+
+
